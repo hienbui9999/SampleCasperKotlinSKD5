@@ -9,12 +9,17 @@ version = '1.0-SNAPSHOT'
 repositories {
     mavenCentral()
 }
-
+jar {
+    manifest {
+        attributes 'Main-Class': 'com.casper.sdk.MyAppKt'
+    }
+}
 dependencies {
     testImplementation 'org.jetbrains.kotlin:kotlin-test'
     testImplementation "org.junit.jupiter:junit-jupiter-api:5.7.2"
     testRuntimeOnly "org.junit.jupiter:junit-jupiter-engine:5.7.2"
-    implementation 'net.jemzart:jsonkraken:1.2.0'
+    implementation "net.jemzart:jsonkraken:1.2.0"
+    implementation "org.jetbrains.kotlin:kotlin-stdlib"
 }
 
 test {
